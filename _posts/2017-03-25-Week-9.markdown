@@ -1,0 +1,24 @@
+---
+layout: post
+comments: true
+title:  Week 9 Progress Report
+tagline: Taking a look at the agile manifesto.
+date:   2017-03-25 21:55:00 +0000
+categories: module1
+---
+
+**Responding to change over following a plan**
+
+2 months into the course and I finally feel like I am starting to understand programming! I am facing problems right left and centre, however I am managing to overcome them all faster than expected&mdash;with the help of Stack Overflow of course.
+
+My hardest problems revolve around concentration and time management. I spent a fair amount of time early on to create a clear strategy with weekly targetst to meet, taking me right through to the launch of my app. But what if things go wrong, or requirements change? Building in time-buffers has provied me with the ability to take a more agile approach to my workflow, yet old habits have prevented me from actually doing so. 
+
+Having a clear plan at the start of a project is key, however working to an agile methodology does negate this somewhat. I find it difficult to stray from my plan for fear that it will push back the final deadline of my project. The reality is of course, that my final deadline is wrong if I am simply missing some vital functionality that I hadn't planned time for. Releasing on time is key as I have spoken about in the past, but releasing quality is always a top priority.
+
+#SMART goal
+
+I want to pro-actively manage my targets and not be afraid to change them, to help me progress with my app through the remainder of the first module.To achieve my goal, I will assess previous and upcoming targets and compare them against my progress, applying any changes that might need to be made. I will do this by updating my Trello board at least every week, on a Saturday morning or when problems or changes occur.
+
+
+
+> Intelligence is the ability to adapt to change. - Stephen Hawking

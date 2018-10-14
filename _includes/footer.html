@@ -1,0 +1,42 @@
+<footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">{{ site.title }}</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>{{ site.title }}</li>
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          {% if site.github_username %}
+          <li>
+            {% include icon-github.html username=site.github_username %}
+          </li>
+          {% endif %}
+
+          {% if site.twitter_username %}
+          <li>
+            {% include icon-twitter.html username=site.twitter_username %}
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>{{ site.description }}</p>
+      </div>
+    
+	  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+<h3>About</h3>
+<p>Hi I'm Phil Penny, based in the UK. I have a solid background in design and I have chosen to study this MA to improve my programming skills - I am currently in the situation whereby I can design anything that comes into my head but I cannot build it into a working application. By the end of this course I hope to have reached a point where I am self-sufficient, so I am able to put any ideas I have into practice from start to finish. This course is also a step on my journey into a potential future career as a lecturer or tutor.</p>
+
+<p>You can view some of my previous work at <a href="http://philpenny.co.uk">philpenny.co.uk</a> or check out my personal blog at <a href="http://naturamohican.com">naturalmohican.com</a></p>
+  </div></div>
+
+</footer>

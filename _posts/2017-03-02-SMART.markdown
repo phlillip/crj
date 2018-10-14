@@ -1,0 +1,46 @@
+---
+layout: post
+comments: true
+title:  6 More Weeks of Winter
+tagline: A SMART objective for the remainder of the module.
+date:   2017-03-02 09:00:00 +0000
+categories: module1
+---
+
+**Over the first 6 weeks of this course I have overcome several problems and feel as though I am making headway into my goals for the first time in a long time.**
+
+I have successfully set up a programming environment for Python & Kivy on Windows (and then again on Linux due to a full system meltdown) and started a Jekyll blog. The app jam was a success in my eyes, however I was unable to use Python & Kivy due to my lack of knowlegde and the pressing timeframe, so instead I built my app using the [MIT App Inventor](http://ai2.appinventor.mit.edu) which enabled me to meet my MVP.
+
+This gave me the advantage of not having to know any programming syntax, being itself a point and click pseudo code builder. Meeting my MVP meant that I had an app I could show my client (in this case my football manager), and test in a real world situation, highlighting unforseen bug and desperately needed features.
+
+---
+
+<video src="/media/SMRT.mp4" controls>
+Sorry, your browser doesn't support embedded videos, 
+but don't worry, you can <a href="/media/SMRT.mp4">download it</a>
+and watch it with your favorite video player!
+</video>
+
+*Every time I heard the word "smart" I think of this clip.*
+
+---
+
+**My SMART objective:**
+
+I'm going to rebuild my appjam app (PitchPal) using Python &amp; Kivy, so that I can gain a better understanding of building an app from scratch in a relevant language, and I'm going to master my time planning while I'm doing this. I'm going to commit at least 5 hours per week for the remaining 7 weeks of the module, meeting weekly targets so I can track my progress.
+
+There are numerous online resources that I can use to support me with this, most notably [Stack Overflow](http://stackoverflow.com/) for specific problem solving, but I will also be working through the book [Learn Python the Hard Way](https://learnpythonthehardway.org). Obviously I will also be using all of my notes and resources from the app jam.
+
+For time management, I will be using [Trello](https://trello.com/) and committing to a weekly blog update. I have provisionally organised the 7 week breakdown as follows:
+
+1. Setup working environment
+2. Create app structure
+3. Creat app functionality
+4. Create app styling
+5. App app improvements
+6. Finish app
+7. Launch app
+
+> Be transparent in your actions, and secret in your plans - Paulo Coelho
+
+[//]: <> (Write an entry of 250 - 300 words in your blog noting your progress so far. The post should identify one challenge and / or obstacle and one SMART action to resolve the issue.)

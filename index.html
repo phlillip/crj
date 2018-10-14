@@ -1,0 +1,76 @@
+---
+layout: default
+---
+
+<div class="home">
+<div id="categories">
+<ul class="blog-cats-list">
+  {% assign sorted_cats = site.categories | sort %}
+  {% for cat in sorted_cats %}
+    {% assign c = cat | first %}
+    {% assign posts = cat | last %}
+    <li class="button cat-button" id="{{ c }}-item">
+      <a href onclick="filter('{{ c }}'); return false;">{{ c }}</a>
+    </li>
+  {% endfor %}
+</ul>
+</div>
+
+
+{% for category in site.categories %}
+  {% assign c = category | first %}
+  {% assign posts = category | last %}
+  <div class="blog-list-container hidden" id="{{ c }}-container">
+  	{% assign numPosts = posts | size %}
+    {% if numPosts == 1 %}
+      <p>{{ posts | size }} post containing category <b>{{ c }}</b></p>
+    {% else %}
+      <p>{{ posts | size }} posts containing category <b>{{ c }}</b></p>
+    {% endif %}
+    <ul class="post-list">
+      {% for post in posts %}
+        {% if post.categories contains c %}
+          <li>
+        	<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+	        <h2>
+	          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+	        </h2>
+	          <p>{{ post.tagline }}</p>
+	      </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+{% endfor %}
+</div>
+
+
+<!--<div id="categories">
+{% assign sorted_cats = site.categories | sort %}
+{% for category in sorted_cats %}
+    {% capture category_name %}{{ category | first }}{% endcapture %}
+
+
+    <!-- id="#{{ category_name | slugize }}" class="button"
+
+
+    <a href onclick="filter('{{ t }}'); return false;" class="button blog-tag-item" id="{{ t }}-item">{{ category_name }}</a>
+{% endfor %}
+</div> -->
+
+
+  <ul id="post-list" class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+          <p>{{ post.tagline }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+

@@ -1,0 +1,159 @@
+---
+layout: post
+comments: true
+title:  A face in the crowd
+tagline: The development process behind my second appjam
+date:   2017-06-11 12:00:00 +0000
+categories: module2 appjam
+---
+
+**The second appjam required us to use at least one of the following technologies&mdash;Locative (GPS), physical web(BLE Beacons), or Augmented reality.**
+
+The theme given to us was COMBINE&mdash;GHOST&mdash;EXPLORATIVE with the following diversifiers to aid with creativity:
+
+1. Make a blank valuable by putting it in an exquisite frame.
+2. Once the search has begun, something will be found.
+3. Faced with a choice do both.
+
+The focus of this appjam was on creativity rather than technical achievement, so I took the bold step of deciding from the outset that I would avoid doing any programming whatsoever during the 48 hour period. This decision was taken for two reasons:
+
+1. My programming ability is low, so to experiment with new technology as well would have taken too much time.
+2. I am keen to improve my creative ability so wanted to dedicate more time to focus on this.
+
+##Collaborative brainstorm
+
+I began with a brainstorm around the central theme as normal, but in order to boost creativity I enlisted the help of my younger sister Hayley (aged 20) to work with me. Once I had finished a round of brainstorming, I then passed the page to her and asked her to respond to the theme herself as well as to my notes. I then responded to her comments, and back and forth it went again. The idea behind this was to harness thoughts outside of my own brain, as well as both of us having our thought process manipulated by each other.
+
+<figure>
+	<img src="/media/2017-06-11/brainstorm.png" />
+	<figcaption>
+		Collaborative brainstorm with my initial notes in blue, Hayley's response in green, my response in black, Hayley's response in red, and finally my response in light blue.
+	</figcaption>
+</figure>
+
+##Idea generation
+
+This process was followed up by idea generation. I tried to list as many ideas as I could, and forced myself to keep going until I had reached at least 15 ideas. Here is the list:
+
+1. PLANKMANIA&mdash;Users can leave beacons in areas they have performed a plank that point to a photo of them doing it.
+2. A face in the crowd&mdash;Users highlight a skill/interest that sets them apart and broadcast it from their phones.
+3. Enclosure&mdash;gain territory by visiting areas. Steal off others. Keep an area long enough to build on it.
+4. Standing Movement&mdash;Allow people to sign AR petitions over the use of spaces rather than just signing their name on a list.
+5. Unscene&mdash;Raise awareness of an area by tagging it with little known historical facts.
+6. FindAR&mdash;Find your friends at a festival.
+7. Autonomography&mdash;Take the best photo of a location.
+8. Gigmob&mdash;Visit a location at a particuar time to see AR of a live gig.
+9. Pioneer&mdash;Visit rare locations locally to claim them.
+10. TagAR&mdash;Leave AR grafitti tags in locations to claim territory.
+11. Timetube&mdash;Watch historical events as computer animations at specific locations.
+12. F&#363;dogotchi&mdash;AR Virtual pets that are garden plants.
+13. Challenge Crumbs&mdash;Drop challenges at GPS points with a video intro. Fitness based, comedy based, or psychology based.
+14. Pigeon Post&mdash;Leave messages exclusively for friends and lovers in secret locations.
+15. Paperclip Assistant&mdash;The MS Office helper applied to other devices.
+16. PARt Find&mdash;See detailed 3D model of car parts from technical diagrams with information and e-commerce.
+
+<figure class="half">
+	<img src="/media/2017-06-11/ideas-1.png" />
+	<figcaption>
+		Forced idea generation
+	</figcaption>
+</figure><figure class="halflast">
+	<img src="/media/2017-06-11/ideas-2.png" />
+	<figcaption>
+	</figcaption>
+</figure>
+
+##Idea development
+
+Having generated all these ideas I then had to find one to focus on and develop. Again, to ensure I was as open as possible, I narrowed it down to five ideas and asked a couple of friends not in the tech industry (James Moore an electrician, and Kevin Jones a surveyor) to choose their favourite:
+
+1. Challenge Crumbs
+2. A face in the crowd
+3. Standing Movement
+4. Timetube
+5. Plankmania (this was thrown in as a curveball - James is widely known amongst our peergroup for his incredible plank/batman exploits)
+
+<figure class="half">
+	<img src="/media/2017-06-11/idea-choice.png" />
+	<figcaption>
+	The democratic selection, and (spoiler alert) subsequent u-turn on choice.
+	</figcaption>
+</figure>
+
+Kevin and James both chose "Challenge Crumbs", with "A face in the crowd" coming in second.
+
+###Idea Development&mdash;Challenge Crumbs
+
+**Drop fitness challenges for your friends or the public at GPS points using BLE beacons**
+
+<figure class="half">
+	<img src="/media/2017-06-11/challenge-crumbs-1.png" />
+	<figcaption>
+
+	</figcaption>
+</figure><figure class="halflast">
+	<img src="/media/2017-06-11/challenge-crumbs-2.png" />
+	<figcaption>
+	</figcaption>
+</figure>
+
+This stage forced me to spend some time researching the chosen technologies - in this case BLE beacons. For some reason I had in my mind that they would be cheap and plentiful like NFC tags&mdash;I was however suprised to find that BLE beacons actually retail for &pound;10 upwards. This is a major obstacle for an app that requires them as it forces a significant user investment.
+
+Approaching the idea from a GPS only perspective, the user would be presented with a map showing all the challenge points on it, and from there could see the challenge details before heading out to participate. However I came to the conclusion that this would work best as a plug-in for the popular fitness GPS tracking app [Strava](http://strava.com) which already handles rankings, route tracking, integration with Garmin and other fitness technologies really well. I felt that this idea wasn't allowing me to investigate new technologies as much as I wanted, so I dropped the development and started on the second choice idea.
+
+###Idea Development&mdash;A face in the crowd
+
+**Users broadcast their interests, needs and skills from their phone using bluetooth and from public BLE beacons in order to find local matches that can provide a solution.**
+
+<figure class="half">
+	<img src="/media/2017-06-11/a-face-in-the-crowd-1.png" />
+	<figcaption>
+	Initial concept
+	</figcaption>
+</figure><figure class="halflast">
+	<img src="/media/2017-06-11/a-face-in-the-crowd-2.png" />
+	<figcaption>
+	App idea
+	</figcaption>
+</figure>
+<figure class="half">
+	<img src="/media/2017-06-11/a-face-in-the-crowd-3.png" />
+	<figcaption>
+	Personas
+	</figcaption>
+</figure><figure class="halflast">
+	<img src="/media/2017-06-11/a-face-in-the-crowd-4.png" />
+	<figcaption>
+	User flow
+	</figcaption>
+</figure>
+
+**Wireframes**
+
+Here you can see how various situations are handled by the app. Unfortunately time constraints mean this is as far as I got&mdash;but I will animate these screens to show the app in use which should give you more of an idea of how the app works.
+<figure>
+	<img src="/media/2017-06-11/a-face-in-the-crowd-8.png" />
+	<figcaption>
+	App Initialisation
+	</figcaption>
+</figure>
+<figure>
+	<img src="/media/2017-06-11/a-face-in-the-crowd-5.png" />
+	<figcaption>
+	Gaining a match and immediate contact
+	</figcaption>
+</figure>
+<figure>
+	<img src="/media/2017-06-11/a-face-in-the-crowd-6.png" />
+	<figcaption>
+	Viewing a match and casual contact
+	</figcaption>
+</figure>
+<figure>
+	<img src="/media/2017-06-11/a-face-in-the-crowd-7.png" />
+	<figcaption>
+	Public beacon interaction
+	</figcaption>
+</figure>
+
+> One can acquire everything in solitude except character. — Stendhal

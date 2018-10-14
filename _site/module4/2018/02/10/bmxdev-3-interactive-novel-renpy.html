@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>BMX Dev S1W3 - activity</title>
+  <meta name="description" content="Create an interactive novel using Ren’Py, loosely based on the game creation activity from Week 2. There must be at least three interactive moments within th...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/module4/2018/02/10/bmxdev-3-interactive-novel-renpy.html">
+  <link rel="alternate" type="application/rss+xml" title="Critical Reflective Journal" href="http://localhost:4000/feed.xml">
+	<link href='http://fonts.googleapis.com/css?family=Oxygen:700,400,300' rel='stylesheet' type='text/css'>
+</head>
+
+
+  <body>
+    <div class="page-content">
+      <div class="wrapper">
+		  <p><a class="page-title" href="/">Critical Reflective Journal</a></p>
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">BMX Dev S1W3 - activity</h1>
+    <p class="post-meta"><time datetime="2018-02-10T18:00:00+00:00" itemprop="datePublished">Feb 10, 2018</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p><strong>Create an interactive novel using Ren’Py, loosely based on the game creation activity from Week 2. There must be at least three interactive moments within the novel.</strong></p>
+
+<h3 id="design">Design</h3>
+
+<p>Using my previous game concept as a base, I chose to create a flow diagram to help me understand the necessary choices and content for my novel:</p>
+
+<figure>
+	<img src="/media/2018-02-10/vaporwave__process-flow.jpg" />
+	<figcaption>
+		Flow diagram for vaporwave.
+	</figcaption>
+</figure>
+
+<p>The 3 main choices in the game are as follows:</p>
+
+<ol>
+  <li>Choose music to use with the app - this either ends the game immediately (bad ending) or allows you to carry on.</li>
+  <li>Choose which type of surfboard - this gives you two distinct story paths. The longboard is the only way to the good ending, whie the shortboard gives you two variations of the sad ending.</li>
+</ol>
+
+<p>Shortboard path</p>
+
+<ol>
+  <li>Allow fan to take a selfie - sad ending.</li>
+  <li>Don;t allow fan to take a selfie - sad ending with additional sadness.</li>
+</ol>
+
+<p>Longboard path</p>
+
+<ol>
+  <li>Don’t save the animals - leads you to an OK ending.</li>
+  <li>Save the animals - leads you to the good ending.</li>
+</ol>
+
+<h3 id="implementation">Implementation</h3>
+
+<p>I spent a couple of hours getting to grips with Ren’Py, playing with various settings and trying to incorporate as many features as I could into my story. Here is the screencast of the first version:</p>
+
+<video src="/media/2018-02-10/vaporwave_screencast--1.mp4" controls="">
+Sorry, your browser doesn't support embedded videos, 
+but don't worry, you can <a href="/media/SMRT.mp4">download it</a>
+and watch it with your favorite video player!
+</video>
+
+<h3 id="moving-forward">Moving Forward</h3>
+
+<p>Obviously this was an exercise in getting to grips with the technology and the logic behind it all, however my script writing needs serious work. The script, together with the graphics and sound are base-level placeholders in this instance.</p>
+
+<p>I will seek out further information regarding copyright; imagery can be created by myself, however the use of music downloaded free from the internet needs careful consideration.</p>
+
+<h3 id="scriptrpy">script.rpy</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Declare characters used by this game.
+define k = Character('Kev', color="#c8ffc8")
+define d = Character('Doc Si', color="#c8c8ff")
+define f = Character('Fan', color="#ff0000")
+
+# This is a variable that is False unless the reader selects a longboard
+default longboard = False
+# False unless the reader stops the fan having a selfie
+default selfie = False
+
+# The game starts here.
+label start:
+
+    # Start by playing some music.
+    play music "chains.mp3" fadein 5.0
+
+    scene black
+    with fade
+
+    "It's 2047 and the seas are polluted."
+
+    scene bg pollution
+    with fade
+
+    "Deep-sea landfills created 30 years ago have ruptured and waste is being washed to shore \ \ \ d a y \ \ \ a f t e r \ \ \ d a y ..."
+
+    "The world’s coastlines are being destroyed."
+
+    show kev bw back
+    with pixellate
+
+    "Kev can no longer run his surf business or enjoy his favourite past-time."
+
+    k "There must be something I can do about this!"
+
+    
+    hide kev bw back
+    show doc white smile
+    with vpunch
+
+    d "There is! With your skills and my genius we can solve the problem!"
+
+    scene bg cave
+    with fade
+
+    show doc white smile
+    with vpunch
+
+    d "Through my work at \ \ \ T h e \ \ \ B r i t i s h \ \ \ S e a \ \ \ R e s e a r c h \ \ \ C e n t r e ..."
+
+    d "... I have developed a revolutionary technology that vapourises plastic and oils using certain vibrational frequencies found in \ \ \ v a p o r w a v e \ \ \ music..."
+
+    d "...I have created a voice-controlled app that can harness this technology using the vibration module found in a mobile phone!"
+
+    hide doc white smile
+    show kev bw back
+    with pixellate
+
+    k "Oh yeah, what's it called?"
+
+    hide kev bw back
+    show doc white smile
+    with vpunch
+
+    d "It's called “V A P O R W A V E”"
+
+    d "If you can build a custom surfboard that will mount a mobile phone..."
+
+    d "...then together we can clean the world's beaches!"
+
+    hide doc white smile
+    show kev bw back
+    with dissolve
+
+    # decision 1: die or continue game
+
+    menu:
+
+        "But first we need to pick the right music..."
+
+        "every breaking wave":
+            jump badending
+
+        "i \ \ \ b l e s s  \ \ \ t h e \ \ \ r a i n s":
+            play music "toto.mp3"
+
+            scene black
+            with fade
+
+            "... d o w n  \ \ \ i n  \ \ \ a f r i c a ..."
+            with fade
+
+    # story continues
+
+    hide kev bw back
+
+    scene bg cave
+    with fade
+    show doc white smile
+    with vpunch
+
+    d "Excellent! Let's begin!"
+
+    d "Now, here's a mobile phone with my \ \ \ v a p o r w a v e \ \ \ app installed, simply mount it to your surfboard and get cleaning!"
+
+    # NEW SCENE: Kev's workshop
+
+    scene bg pc
+    show kev bw back
+    with fade
+
+    "Hmmm, which board should I use, I've got a longboard and a shortboard"
+
+    menu:
+
+        "The question is, which board to make..."
+
+        "...a \ \ \ l o n g b o a r d \ \ \ dude...":
+            jump longboard
+
+        "A shortboard homie!":
+            jump shortboard
+
+    label shortboard:
+
+        scene bg silversurfer
+
+        play music "onlyoveryou.mp3"
+
+        "I grab my shortboard and my raddest wetsuit, it's lime green!"
+
+        "I can't wait to head to the beach and shred some waves, i'll look great and i'll be saving the day!"
+
+        "After clearing the beach using a number of power moves, Kev is approached as he heads back up the beach."
+
+        f "Wow it's really you! Can I get a selfie?"
+
+        menu:
+
+            "Sure go right ahead":
+                jump sadending
+
+            "Sorry I don't have time, I've got beaches to clean!":
+                $ selfie = True
+                jump sadending
+
+    label longboard:
+
+        $ longboard = True
+
+        "With my longboard I can turn the phone up to it's maximum power and still catch waves"
+
+        "Kev sweeps along the waves, cleaning everything in sight"
+
+        "He comes across a baby seal trapped in oil and tangled in plastic netting, it looks messy"
+
+        menu:
+
+            "s a v e \ \ \ t h e \ \ \ a n i m a l s":
+                jump goodending
+
+            "Chase the sun":
+                jump okending
+
+label badending:
+    stop music
+
+    "No Kev. U2 songs are never the answer."
+
+    play music "toolittletoolate.mp3" fadein 5.0
+    scene black
+    with dissolve
+
+    "The pollution builds up..."
+
+    "...the very air we breathe is now contaminated..."
+
+    scene bg death
+    with dissolve
+
+    "...if only we had b l e s s e d    t h e    r a i n s..."
+
+    "{b}Bad Ending{/b}."
+
+    return
+
+label goodending:
+    scene bg dolphin
+
+    "Kev plucks the seal from the sea and it sits in front of him on the board"
+
+    "Kev goes on to clean all the beaches and save trapped wildlife."
+
+    "Peace and tranquility is returned to the oceans."
+
+    "Kev returns to his peaceful life of surfing and teaching."
+
+    "{b}... g o o d \ \ \ e n d i n g ...{/b}"
+
+    return
+
+label okending:
+    play music "lonely.mp3"
+    scene bg surf
+
+    "Kev leaves the seal, worried it will slow him down too much."
+
+    "Kev goes on to clean all the beaches."
+
+    "Peace and tranquility is returned to the oceans."
+
+    "However, many animals have died in the pollution."
+
+    "The eco-balance is disturbed and many species become extinct with no food chain to support them."
+
+    "Kev returns to his peaceful life of surfing and teaching, but now on a strict globally enforced diet of insects."
+
+    "{b}ok ending{/b}."
+
+    return
+
+label sadending:
+    scene bg surf
+    play music "onemoreyear.mp3" fadein 5.0
+
+    "Kev goes on to clean all the beaches."
+
+    "Peace and tranquility is returned to the oceans."
+
+    "However, due to his superstar status he has influenced a generation of surfers."
+
+    if selfie:
+        show kev bw back
+        "...all of whom hate him for shunning their photo attempts. They throw rocks at him in the water."
+
+        k "...I bust my stick I shred so bad..."
+
+    "The beaches are crowded and Kev can no longer surf in peace. He lives out a quiet life of sadness."
+
+    "{b}sad ending{/b}."
+
+    return
+</code></pre></div></div>
+
+  </div>
+  <hr>
+<div class="PageNavigation">
+
+<a class="prev" href="/module4/2018/02/08/bmxdev-2-fictional-worlds-and-game-mechanics.html">&laquo; BMX Dev S1W2 - activity</a>
+
+
+<a class="next" href="/module4/2018/02/13/bmxdev-3-reading-academic-literature.html">BMX Dev S1W3 - a sure fire way to become Scrabble king &raquo;</a>
+
+</div>
+<br />
+  <div class="comments">
+	  
+			<div id="disqus_thread"></div>
+			<script>
+
+			/**
+			*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+			*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+			/*
+			var disqus_config = function () {
+			this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+			this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+			};
+			*/
+			(function() { // DON'T EDIT BELOW THIS LINE
+			var d = document, s = d.createElement('script');
+			s.src = '//ma-creative-app-development-1.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+			})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		
+  </div>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Critical Reflective Journal</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Critical Reflective Journal</li>
+          <li><a href="mailto:phillippenny@gmail.com">phillippenny@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/phlillip"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">phlillip</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>As part of my MA in Creative App Development, I will be keeping this weekly blog to increase self-awareness and understanding as I develop my skills.
+</p>
+      </div>
+    
+	  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<h3>About</h3>
+<p>Hi I'm Phil Penny, based in the UK. I have a solid background in design and I have chosen to study this MA to improve my programming skills - I am currently in the situation whereby I can design anything that comes into my head but I cannot build it into a working application. By the end of this course I hope to have reached a point where I am self-sufficient, so I am able to put any ideas I have into practice from start to finish. This course is also a step on my journey into a potential future career as a lecturer or tutor.</p>
+
+<p>You can view some of my previous work at <a href="http://philpenny.co.uk">philpenny.co.uk</a> or check out my personal blog at <a href="http://naturamohican.com">naturalmohican.com</a></p>
+  </div></div>
+
+</footer>
+
+
+  </body>
+
+</html>

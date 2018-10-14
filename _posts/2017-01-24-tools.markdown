@@ -1,0 +1,106 @@
+---
+layout: post
+comments: true
+title:  Tools (End of year 1 update)
+tagline: A little insight into the things I use to create digital work.
+date:   2018-01-24 08:25:00 +0000
+categories: module1
+---
+
+*Original post written Jan 24th 2017, first updated April 24th 2017*
+
+**Everybody has their own way of working digitally, here's mine. I will update this post as things change over the course of the next 2 years.**
+
+
+
+### Wireframing
+
+##### Pencil and paper, UXPin
+
+I have recently had experience with [UXPin](https://www.uxpin.com/) and I can see the benefits of using such software, especially for fast iteration and communication. Pencil and paper still very much has a place in production as an initial tool.
+
+**Previously**
+
+##### Pencil and paper.
+
+I don't use wireframing tools or rapid prototyping tools such as Balsamiq, I find that by starting out on paper I can involve other people in the process and get their input. At the very least they will gain an understanding of the way I work and what wireframing means by doing it with me. I have found it useful in the past to wireframe with clients at the very early stages of a project - sometime in the first meeting.
+
+### High Fidelty Visuals
+
+#### [Sketch](https://www.sketchapp.com/)
+
+Moving forwards, I will be exploring Sketch as a streamlined app-development visual tool. Illustrator has all the capability of Sketch, however it would require a great deal of set-up in order to replicate the functionality.
+
+**Previously**
+
+##### Illustrator ([Inkscape](https://inkscape.org/)).
+
+Illustrator is a vector art program. This means that if you design, for example, an app landing page, and the client wants it to be projected onto the side of the Shard, you know it can be done with no loss of quality. In my opinion, Photoshop should be used for editing photographic images, not for designing applications. Inkscape is a viable open source alternative.
+
+### Operating System
+
+#### MacOS
+
+Having purchased a second-hand Macbook to enable remote working, I am now going to immerse myself into the Apple ecosystem. I can both program and design under one OS.
+
+#### Linux Manjaro
+
+In an effort to deepen my understanding of UNIX I have switched from Ubuntu to Manjaro, which is based on Arch (Arch linux being my ultimate goal). Manjaro is a much less user-friendly distribution in that it provides far less hand-holding and compatibility out of the box.
+
+**Previously**
+
+##### Linux Ubuntu
+
+I am now working full time with the Linux OS using [Ubuntu](https://www.ubuntu.com/desktop), running Windows under [VirtualBox](https://www.virtualbox.org/) to gain access to Adobe creative programs.
+
+**Previously**
+
+*Windows: Admittedly I only use this because of my need for Adobe programs. I intend to switch my working environment over to Linux for all course related work. My console of choice on Windows is [Babun](http://babun.github.io/).*
+
+### Text Editing
+
+#### Atom
+
+I have recently switched to Atom for better integration with GIT and package management.
+
+**Previously**
+
+##### Gedit
+
+I am now using the inbuilt text editor for Ubuntu which is the super fast [Gedit](https://wiki.gnome.org/Apps/Gedit). I did try my hand at Notepad++ for Linux but there are a couple of bugs which really slow my progress down.
+
+**Previously**
+
+*[Notepad++](https://notepad-plus-plus.org/) : Super simple yet super powerful. I use it for all my html / css editing and any Jekyll powered sites. I hope I can use this course to springboard my attempts to learn [Vim](http://www.vim.org/) alongside programming.*
+
+### IDE
+
+##### Pycharm Community Edition
+
+The free version of [Pycharm](https://www.jetbrains.com/pycharm/) is my first experience of running an IDE and it seems very intuitive and fast. However, I do still need to spend time fully understanding file structures and where I should be saving things.
+
+**Previously**
+
+*None: I have used Microsoft Visual Studio in the past when helping development teams out, however currently all my editing is done in Notepad++. I have installed PyCharm in anticipation of beginning Python programming.*
+
+### FTP
+
+#### Cyberduck
+
+Now I am using MacOS I will switch to Cyberduck to gain familiarity with another program.
+
+**Previously**
+
+##### [Filezilla](https://filezilla-project.org/)
+
+I am yet to try [Cyberduck](https://cyberduck.io/) in this space.
+
+### Version Control
+
+##### GitHub
+
+I am now fully set up with [GitHub](https://github.com/phlillip), though I do need to increase the regularity with which I use the service.
+
+**Previously**
+
+*None: In the past I have only used [TortoiseSVN](https://tortoisesvn.net/) however I will be using Github from now on in line with course recommendations.*

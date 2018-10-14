@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+  <script>
+  function filter(cat) {
+  setActiveCat(cat);
+  showContainer(cat);
+}
+
+function setActiveCat(cat) {
+  // loop through all items and remove active class
+  var items = document.getElementsByClassName('cat-button');
+  for(var i=0; i < items.length; i++) {
+    items[i].setAttribute('class', 'button cat-button');
+  }
+
+  // set the selected cat's item to active
+  var item = document.getElementById(cat + '-item');
+  if(item) {
+    item.setAttribute('class', 'button cat-button active');
+  }
+}
+
+function showContainer(cat) {
+  //hide complete list
+  document.getElementById('post-list').setAttribute('class', 'hidden post-list');
+
+  // loop through all lists and hide them
+  var lists = document.getElementsByClassName('blog-list-container');
+  for(var i=0; i < lists.length; i++) {
+    lists[i].setAttribute('class', 'blog-list-container hidden');
+  }
+
+  // remove the hidden class from the list corresponding to the selected cat
+  var list = document.getElementById(cat + '-container');
+  if(list) {
+    list.setAttribute('class', 'blog-list-container');
+  }
+}
+</script>
+
+</html>

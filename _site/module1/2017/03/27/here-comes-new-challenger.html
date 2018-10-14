@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Here comes a new challenger!</title>
+  <meta name="description" content="Accessibility is key.">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/module1/2017/03/27/here-comes-new-challenger.html">
+  <link rel="alternate" type="application/rss+xml" title="Critical Reflective Journal" href="http://localhost:4000/feed.xml">
+	<link href='http://fonts.googleapis.com/css?family=Oxygen:700,400,300' rel='stylesheet' type='text/css'>
+</head>
+
+
+  <body>
+    <div class="page-content">
+      <div class="wrapper">
+		  <p><a class="page-title" href="/">Critical Reflective Journal</a></p>
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Here comes a new challenger!</h1>
+    <p class="post-meta"><time datetime="2017-03-27T09:30:00+01:00" itemprop="datePublished">Mar 27, 2017</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p><strong>Accessibility is key.</strong></p>
+
+<p>Monday morning 8am, browsing <a href="https://news.ycombinator.com/news">HackerNews</a> and I stumble aross the comments for this article: <a href="https://news.ycombinator.com/item?id=13964561">Python For Android</a>; most notably <a href="https://news.ycombinator.com/item?id=13964561">this one</a> by Raphael Gaschignard <a href="https://news.ycombinator.com/user?id=rtpg">(username rtpg)</a> and the response by <a href="https://news.ycombinator.com/user?id=freakboy3742">freakboy3742</a>:</p>
+
+<hr />
+<figure>
+	<img src="/media/2017-03-27/python-voc.png" />
+	<figcaption>
+		Exchange between rtpg and freakboy3742 on HackerNews.
+	</figcaption>
+</figure>
+
+<p>Transcription:</p>
+
+<p><strong>rtpg:</strong></p>
+
+<p><em>This project(Kivy) doesn’t use the native Android UI components, so it’s a bit of a negative. You don’t get any of the stuff like accessibility.
+So I remember hearing that a difficulty with hooking Python to Android is that there’s some sort of limit to the amount of Java methods you can access through the JNI, but I could never find a proper explanation of this.
+If I just had a version of CPython compiled on Android, given Java’s nature of running on a virtual machine, wouldn’t it be possible to dynamically load arbitrary classes through the JNI and use the native Android stuff?
+What are the primary difficulties to this, if you ignore performance?</em></p>
+
+<p><strong>freakboy3742:</strong></p>
+
+<p><em>The primary difficulty is that JNI is really limited on Android. It exists, but it’s really slow, and there are some hard limits imposed at the kernel level.
+An alternative approach is VOC <a href="http://pybee.org/voc">(http://pybee.org/voc)</a> - this is compiler that takes Python code, and output Java bytecode. This means you can use the Android native UI components, because your Python code becomes indistinguishable from code written in Java. Combine with Briefcase <a href="http://pybee.org/briefcase">(http://pybee.org/briefcase)</a>, and you can get an Android app with one command; combine with Toga <a href="http://pybee.org/toga">(http://pybee.org/toga)</a>, and you can get a cross platform app using native system components.</em></p>
+
+<p><em>If you want to see this in action, here’s a video: <a href="https://www.youtube.com/watch?v=RisCgSIWwLA]">https://www.youtube.com/watch?v=RisCgSIWwLA</a></em></p>
+
+<p><em>(Full disclosure - I’m the primary author of these tools)</em></p>
+
+<hr />
+
+<p>At the moment a lot of this goes over my head. However having spent a week dealing with Kivy’s styling, upon watching the video referenced by freakboy3742 I am excited that native components can be used with Python, thus increasing the accessibility for all users. I get the feeling from my early experience that Kivy is more suited to games which inevitably run in full screen mode and have custom controls, whereas utility apps such as PitchPal may benefit from the native GUI.</p>
+
+<p>Further investigation is needed.</p>
+
+<blockquote>
+  <p>The one argument for accessibility that doesn’t get made nearly often enough is how extraordinarily better it makes some people’s lives. How many opportunities do we have to dramatically improve people’s lives just by doing our job a little better? - Steve Krug</p>
+</blockquote>
+
+  </div>
+  <hr>
+<div class="PageNavigation">
+
+<a class="prev" href="/module1/2017/03/25/Week-9.html">&laquo; Week 9 Progress Report</a>
+
+
+<a class="next" href="/module1/2017/04/07/web-to-app-to-web.html">The web goes full circle &raquo;</a>
+
+</div>
+<br />
+  <div class="comments">
+	  
+			<div id="disqus_thread"></div>
+			<script>
+
+			/**
+			*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+			*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+			/*
+			var disqus_config = function () {
+			this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+			this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+			};
+			*/
+			(function() { // DON'T EDIT BELOW THIS LINE
+			var d = document, s = d.createElement('script');
+			s.src = '//ma-creative-app-development-1.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+			})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		
+  </div>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Critical Reflective Journal</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Critical Reflective Journal</li>
+          <li><a href="mailto:phillippenny@gmail.com">phillippenny@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/phlillip"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">phlillip</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>As part of my MA in Creative App Development, I will be keeping this weekly blog to increase self-awareness and understanding as I develop my skills.
+</p>
+      </div>
+    
+	  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<h3>About</h3>
+<p>Hi I'm Phil Penny, based in the UK. I have a solid background in design and I have chosen to study this MA to improve my programming skills - I am currently in the situation whereby I can design anything that comes into my head but I cannot build it into a working application. By the end of this course I hope to have reached a point where I am self-sufficient, so I am able to put any ideas I have into practice from start to finish. This course is also a step on my journey into a potential future career as a lecturer or tutor.</p>
+
+<p>You can view some of my previous work at <a href="http://philpenny.co.uk">philpenny.co.uk</a> or check out my personal blog at <a href="http://naturamohican.com">naturalmohican.com</a></p>
+  </div></div>
+
+</footer>
+
+
+  </body>
+
+</html>
